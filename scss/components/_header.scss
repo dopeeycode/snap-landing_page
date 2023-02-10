@@ -1,0 +1,87 @@
+@import 'varAndMixins';
+
+//HEADER
+
+header {
+    
+    //all header content
+    .header-content {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        padding: 1.5rem;
+        //header content left(navbar links)
+        .logo{
+            display: flex;
+        }
+        .header-content-left {
+            gap: 3rem;
+            align-items: center;
+            display: flex;
+            .nav_bar ul{
+                display:flex;
+                gap: 1.5rem;
+                li a{
+                    color: $medium_gray;
+                    &:hover{
+                        color: $almost_black;
+                    }
+                    img {
+                        padding: 0 .3rem;
+                    }
+                }
+        
+            }
+
+            //SubMenu Dropdown hover
+
+            #submenu_features{
+                @include subMenu(true);
+                left: 7%;
+            }
+
+            .features{
+                &:hover + #submenu_features{
+                    display: flex;
+                }
+            }
+
+            #submenu_company {
+                @include subMenu(true);
+            }
+
+            .company{
+                &:hover + #submenu_company {
+                    display: flex;
+                }
+            }
+
+            
+        }
+        //header content right(buttons)
+        .header-content-right{
+            .btns {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                & a:nth-child(1) {
+                    color: $medium_gray;
+                }
+                & a:nth-child(2) {
+                    color: $medium_gray;
+                    border: 2px solid $medium_gray;
+                    padding: .8rem .9rem;
+                    border-radius: 1rem;
+                }
+                & a:hover{
+                    border-color: $almost_black;
+                    color: $almost_black;
+                }
+            }
+            .menu_mobile {
+                cursor: pointer;
+            }
+        }
+    }
+    
+} // header --

@@ -1,0 +1,55 @@
+@import 'varAndMixins';
+
+
+#main_page {
+    .main-hero{
+        .container {
+            justify-content: space-around;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1150px;
+            margin: 3rem auto;
+            .content_left{
+                h1 {
+                    font-size: 5rem;
+                    margin-bottom: 1rem;
+                    color: $almost_black;
+                }
+                p{
+                    margin-bottom: 2rem;
+                    color: $almost_black;
+                }
+                .btn_hero{
+                    margin-bottom: 6rem;
+                    a{
+                        background-color: $almost_black;
+                        border: 1px solid $almost_black;
+                        color: $almost_white;
+                        padding: .8rem 1rem;
+                        transition: .3s;
+                        border-radius: .7rem;
+                        &:hover{
+                            background-color: transparent;
+                            border: 1px solid $almost_black;
+                            color: $almost_black;
+                        }
+
+                    }
+                }
+
+                .clients {
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem
+                }
+            }
+            .illustration_mobile {
+                display: none;
+            }
+            .content_illustration {
+                width: 400px;
+            }
+        }
+    }
+}

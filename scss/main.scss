@@ -1,0 +1,22 @@
+@import './components/varAndMixins';
+@import './components/header';
+@import './components/contentMain';
+@import './components/mediaqueries';
+@import './components/contentMenuMobile';
+
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+    text-decoration: none; list-style: none;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+html {
+    -webkit-tap-highlight-color: transparent;
+  }

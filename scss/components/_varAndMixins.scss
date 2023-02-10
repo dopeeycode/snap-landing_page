@@ -1,0 +1,19 @@
+$almost_white: hsl(0, 0%, 98%);
+$medium_gray: hsl(0, 0%, 41%);
+$almost_black: hsl(0, 0%, 8%);
+
+
+@mixin subMenu($sub) {
+    @if $sub == true{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 1rem;                
+        display: none;
+        padding: 1rem 2rem;
+        background-color: $almost_white;
+        border-radius: .5rem;
+        box-shadow: 1px 2px 20px 1px rgba(0, 0, 0, 0.2);
+    }
+}
